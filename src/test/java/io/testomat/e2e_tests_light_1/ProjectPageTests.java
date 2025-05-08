@@ -15,6 +15,6 @@ public class ProjectPageTests {
         $x("//div[@id='content-desktop']//input[@id='user_password']").sendKeys("Fuu4wsE2!s9e@BS");
         $x("//div[@id='content-desktop']//input[@id='user_remember_me']").click();
         $x("//div[@id='content-desktop']//input[@type='submit']").click();
-        $x("//div[@id='content-desktop']//div[@class='common-flash-success-right']").shouldBe(visible);
+        $x("//div[@id='content-desktop']//div[@class='common-flash-success-right']").shouldBe(visible);//check commit
     }
 }
