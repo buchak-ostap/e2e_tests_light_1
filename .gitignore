@@ -41,5 +41,7 @@ bin/
 ### Mac OS ###
 .DS_Store
 
-# Ignore credentials file
+# Credentials file
 src/test/resources/test-users.properties
+
+.env

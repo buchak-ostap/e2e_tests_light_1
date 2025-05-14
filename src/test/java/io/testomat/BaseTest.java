@@ -1,6 +1,7 @@
 package io.testomat;
 
 import com.codeborne.selenide.Configuration;
+import io.github.cdimascio.dotenv.Dotenv;
 import io.testomat.util.CredentialsReader;
 import io.testomat.util.TestUser;
 import org.junit.jupiter.api.BeforeAll;
@@ -11,6 +12,9 @@ import static com.codeborne.selenide.Selenide.open;
 
 public abstract class BaseTest {
 
+    static Dotenv env = Dotenv.load();
+    static String baseUrl = env.get("BASE_URL");
+
     @BeforeAll
     public static void globalSetUp() {
         Configuration.browser = "chrome";
@@ -20,7 +24,7 @@ public abstract class BaseTest {
 
     public static void loginAs(String role) {
         TestUser user = CredentialsReader.getUser(role);
-        open("https://app.testomat.io/");
+        open(baseUrl);
         $x("//div[@id='content-desktop']//input[@id='user_email']").sendKeys(user.username());
         $x("//div[@id='content-desktop']//input[@id='user_password']").sendKeys(user.password());
         $x("//div[@id='content-desktop']//input[@id='user_remember_me']").click();
