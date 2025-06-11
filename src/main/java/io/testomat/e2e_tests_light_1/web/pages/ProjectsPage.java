@@ -30,10 +30,11 @@ public class ProjectsPage {
         contentDesktop.$(".common-flash-success p").shouldBe(visible).shouldHave(text("Signed in successfully"));
     }
 
-    public void isLoaded() {
+    public ProjectsPage isLoaded() {
         contentDesktop.$("h2").shouldHave(text("Projects"));
         searchInput.shouldHave(attribute("placeholder", "Search Project"));
         gridItems.shouldHave(sizeGreaterThan(0));
+        return this;
     }
 
     private SelenideElement getProjectItem(ProjectName projectName) {
@@ -43,6 +44,11 @@ public class ProjectsPage {
     public void searchProjectWithExpectedCount(ProjectName projectName, int expectedCount) {
         searchInput.setValue(projectName.getDisplayName());
         gridItems.filter(visible).shouldHave(size(expectedCount));
+    }
+
+    public ProjectsPage searchProject(ProjectName projectName) {
+        searchInput.setValue(projectName.getDisplayName());
+        return this;
     }
 
     public void openProject(ProjectName projectName) {

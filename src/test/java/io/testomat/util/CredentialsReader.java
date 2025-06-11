@@ -1,5 +1,7 @@
 package io.testomat.util;
 
+import io.testomat.e2e_tests_light_1.util.TestUser;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;

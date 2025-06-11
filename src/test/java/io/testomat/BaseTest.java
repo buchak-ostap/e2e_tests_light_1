@@ -1,6 +1,10 @@
 package io.testomat;
 
 import io.github.cdimascio.dotenv.Dotenv;
+import io.testomat.e2e_tests_light_1.common.Application;
+import io.testomat.e2e_tests_light_1.enums.Role;
+import io.testomat.e2e_tests_light_1.util.TestUser;
+import io.testomat.util.CredentialsReader;
 import org.junit.jupiter.api.BeforeAll;
 
 import static com.codeborne.selenide.Configuration.*;
@@ -12,6 +16,7 @@ import static java.lang.System.out;
 public abstract class BaseTest {
 
     static Dotenv env = configure().ignoreIfMissing().load();
+    protected static Application app = new Application();
 
     static {
         baseUrl = getProperty("baseUrl", env.get("BASE_URL"));
@@ -26,5 +31,11 @@ public abstract class BaseTest {
         browserSize = getProperty("browserSize", "1920x1080");
         headless = parseBoolean(getProperty("headless", "false"));
         out.printf("🧪 Running tests on %s [%s] | Headless: %s | Base URL: %s%n", browser, browserSize, headless, baseUrl);
+    }
+
+    public static void loginAs(Role role) {
+        TestUser user = CredentialsReader.getUser(role.getName());
+        app.signInPage.open().loginUser(user);
+        app.projectsPage.signInSuccess();
     }
 }

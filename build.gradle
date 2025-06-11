@@ -10,10 +10,11 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.slf4j:slf4j-simple:2.0.9'
     implementation 'com.codeborne:selenide:7.9.1'
     implementation group: 'io.github.cdimascio', name: 'java-dotenv', version: '5.2.2'
-    testImplementation 'io.qameta.allure:allure-java-commons:2.29.1'
 
+    testImplementation 'io.qameta.allure:allure-java-commons:2.29.1'
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
