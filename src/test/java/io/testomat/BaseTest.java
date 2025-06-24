@@ -1,11 +1,13 @@
 package io.testomat;
 
+import com.codeborne.selenide.junit5.TextReportExtension;
 import io.github.cdimascio.dotenv.Dotenv;
 import io.testomat.e2e_tests_light_1.common.Application;
 import io.testomat.e2e_tests_light_1.enums.Role;
 import io.testomat.e2e_tests_light_1.util.TestUser;
 import io.testomat.util.CredentialsReader;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import static com.codeborne.selenide.Configuration.*;
 import static io.github.cdimascio.dotenv.Dotenv.configure;
@@ -13,6 +15,7 @@ import static java.lang.Boolean.parseBoolean;
 import static java.lang.System.getProperty;
 import static java.lang.System.out;
 
+@ExtendWith({TextReportExtension.class})
 public abstract class BaseTest {
 
     static Dotenv env = configure().ignoreIfMissing().load();
