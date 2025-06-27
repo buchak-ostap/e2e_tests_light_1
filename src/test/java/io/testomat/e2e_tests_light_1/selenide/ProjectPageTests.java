@@ -1,6 +1,5 @@
-package io.testomat.e2e_tests_light_1;
+package io.testomat.e2e_tests_light_1.selenide;
 
-import io.testomat.BaseTest;
 import io.testomat.e2e_tests_light_1.enums.ProjectName;
 import org.junit.jupiter.api.*;
 

@@ -1,4 +1,4 @@
-package io.testomat.e2e_tests_light_1.web.pages;
+package io.testomat.e2e_tests_light_1.selenide.pages;
 
 import io.testomat.e2e_tests_light_1.enums.ProjectName;
 

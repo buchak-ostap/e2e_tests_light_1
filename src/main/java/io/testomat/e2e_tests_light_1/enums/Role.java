@@ -1,7 +1,8 @@
 package io.testomat.e2e_tests_light_1.enums;
 
 public enum Role {
-    REGULAR("regular");
+    REGULAR("regular"),
+    ADMIN("admin");
 
     private final String name;
 

@@ -1,8 +1,8 @@
-package io.testomat.e2e_tests_light_1.web.pages;
+package io.testomat.e2e_tests_light_1.selenide.pages;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
-import io.testomat.e2e_tests_light_1.util.TestUser;
+import io.testomat.e2e_tests_light_1.selenide.util.TestUser;
 
 import static com.codeborne.selenide.Condition.hidden;
 import static com.codeborne.selenide.Selenide.$;

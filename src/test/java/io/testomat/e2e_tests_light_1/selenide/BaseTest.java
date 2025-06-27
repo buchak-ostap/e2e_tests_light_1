@@ -1,10 +1,10 @@
-package io.testomat;
+package io.testomat.e2e_tests_light_1.selenide;
 
 import com.codeborne.selenide.junit5.TextReportExtension;
 import io.github.cdimascio.dotenv.Dotenv;
-import io.testomat.e2e_tests_light_1.common.Application;
 import io.testomat.e2e_tests_light_1.enums.Role;
-import io.testomat.e2e_tests_light_1.util.TestUser;
+import io.testomat.e2e_tests_light_1.selenide.common.Application;
+import io.testomat.e2e_tests_light_1.selenide.util.TestUser;
 import io.testomat.util.CredentialsReader;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.extension.ExtendWith;

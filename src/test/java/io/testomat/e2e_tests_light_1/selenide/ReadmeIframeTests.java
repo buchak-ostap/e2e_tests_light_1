@@ -1,14 +1,13 @@
-package io.testomat.e2e_tests_light_1;
+package io.testomat.e2e_tests_light_1.selenide;
 
-import io.testomat.BaseTest;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
-import static io.testomat.e2e_tests_light_1.common.Application.faker;
 import static io.testomat.e2e_tests_light_1.enums.ProjectName.MANUFACTURE_LIGHT;
 import static io.testomat.e2e_tests_light_1.enums.Role.REGULAR;
+import static io.testomat.e2e_tests_light_1.selenide.common.Application.faker;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class ReadmeIframeTests extends BaseTest {

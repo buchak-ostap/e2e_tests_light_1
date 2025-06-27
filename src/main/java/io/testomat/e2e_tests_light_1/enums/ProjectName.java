@@ -1,7 +1,8 @@
 package io.testomat.e2e_tests_light_1.enums;
 
 public enum ProjectName {
-    MANUFACTURE_LIGHT("Manufacture light");
+    MANUFACTURE_LIGHT("Manufacture light"),
+    HOME("Home");
 
     private final String displayName;
 
