@@ -1,10 +1,10 @@
 package io.testomat.e2e_tests_light_1.selenide.common;
 
-import com.github.javafaker.Faker;
 import io.testomat.e2e_tests_light_1.selenide.pages.ProjectPage;
 import io.testomat.e2e_tests_light_1.selenide.pages.ProjectsPage;
 import io.testomat.e2e_tests_light_1.selenide.pages.ReadmePage;
 import io.testomat.e2e_tests_light_1.selenide.pages.SignInPage;
+import net.datafaker.Faker;
 
 public class Application {
 
